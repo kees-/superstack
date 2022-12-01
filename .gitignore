@@ -1,0 +1,9 @@
+/target/
+/.nrepl-port/
+/.cpcache/
+/.clj-kondo/
+/.lsp/
+/.calva/
+
+.DS_Store
+*.json

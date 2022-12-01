@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" type="text/css" href="https://substackcdn.com/theme/main.css">
+  <link rel="stylesheet" type="text/css" href="https://substackcdn.com/min/main.css">
+  <link rel="stylesheet" type="text/css" href="../posts.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="nav-button{{first?}}" href="{{prev}}">Previous</a>
+      <a id="index" href="../index.html">&UpArrow;</a>
+      <a class="nav-button{{last?}}" href="{{next}}">Next</a>
+    </nav>
+    <input id="darkmode" type="checkbox">
+  </header>
+  <div class="typography body container">
+    <div class="markup">
+      <h1 style="margin: 0;"><a href="{{url}}" target="_blank">{{title}}</a></h1>
+      <h3 class="subtitle" style="padding: 0.275rem 0 3rem;">
+        {{subtitle}}<span>{% if subtitle|not-empty %}&ensp;{% endif %}{{date|date:yyyy-MM-dd}}</span>
+      </h3>
+{{text_html}}
+    </div>
+  </div>
+  <footer>
+    <nav>
+      <a class="nav-button{{first?}}" href="{{prev}}">Previous</a>
+      <a class="nav-button{{last?}}" href="{{next}}">Next</a>
+    </nav>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+{:paths ["src"]
+ :deps {org.clojure/data.json {:mvn/version "2.4.0"}
+        selmer/selmer {:mvn/version "1.12.55"}}
+ :aliases {:build {:exec-fn superstack.main/spit-all!
+                   :exec-args {:src-data "posts.json"
+                               :blog-name "substack"
+                               :output-dir "target"}}}}
